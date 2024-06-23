@@ -277,5 +277,5 @@ td {
 .rc-pagination-total-text.rc-pagination-item-active a {
   background-color: #afcaff;
   border-color: #afcaff;
-  color: #ffffff !important;
+  color: #000 !important;
 }
