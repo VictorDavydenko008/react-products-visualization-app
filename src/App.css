@@ -36,3 +36,246 @@
     transform: rotate(360deg);
   }
 }
+
+main h1 {
+  font-size: 2.2vw;
+  margin: 1vw 2vw;
+}
+
+h2.item-title {
+  font-size: 1.1vw;
+  line-height: 1.4vw;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+}
+
+h3 {
+  font-size: 1vw;
+  margin-bottom: 0.5vw;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 2vw !important;
+  width: 2vw !important;
+  height: 2vw !important;
+}
+
+.slick-next {
+  right: 2vw !important;
+  width: 2vw !important;
+  height: 2vw !important;
+}
+
+.slick-prev:before, 
+.slick-next:before {
+  color: #5a5a5a !important;
+  font-size: 2vw !important;
+}
+
+.slick-list {
+  width: 90vw;
+  box-sizing: border-box;
+  overflow-x: hidden !important;
+}
+
+.slick-slider {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.items-section {
+  padding: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.items-container {
+  margin-top: 0.5vw;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, calc((100% - 4vw) / 5));
+  gap: 1vw;
+}
+
+.item {
+  background-color: rgb(230, 230, 230);
+  padding: 1vw;
+  font-size: 1vw;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.item img {
+  width: 100%;
+  height: 15vw;
+  object-fit: contain;
+}
+
+.item p {
+  margin: 0.7vw 0;
+}
+
+.item-specifications {
+  height: 7vw;
+  -webkit-line-clamp: 5;
+  overflow-y: auto;
+}
+
+.item-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #000000;
+  font-size: 0.8vw;
+  border-collapse: collapse;
+  line-height: 0.9vw;
+}
+
+td {
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+
+.type {
+  font-size: 1.2vw;
+  padding: 1vw;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: #afcaff;
+  border-radius: 5px;
+  width: initial !important;
+  margin-right: 2vw;
+}
+
+.selected {
+  filter: grayscale();
+}
+
+.pagination-data {
+  padding: 0;
+  margin: 3vw 0;
+}
+
+.pagination-data li {
+  list-style: none;
+}
+
+.table-filter-info {
+  padding: 1vw;
+}
+
+.thead-primary tr th {
+  background-color: #afcaff;
+  border-color: #afcaff;
+  color: #fff;
+}
+
+.rc-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.rc-pagination-item,
+.rc-pagination-prev, 
+.rc-pagination-jump-prev, 
+.rc-pagination-jump-next {
+  margin-right: 1vw;
+}
+
+.rc-pagination-total-text {
+  margin-right: 1vw;
+  cursor: initial;
+}
+
+.rc-pagination-jump-next, 
+.rc-pagination-jump-prev, 
+.rc-pagination-next, 
+.rc-pagination-prev {
+  display: inline-block;
+  min-width: 2vw;
+  height: 2vw;
+  color: #000000d9;
+  font-family: Arial;
+  line-height: 2vw;
+  text-align: center;
+  vertical-align: middle;
+  list-style: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.rc-pagination-jump-next button, 
+.rc-pagination-jump-prev button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #5a5a5a;
+}
+
+.rc-pagination-jump-next button:after, 
+.rc-pagination-jump-prev button:after {
+  display: block;
+  content: "•••";
+}
+
+.rc-pagination-item, 
+.rc-pagination-prev, 
+.rc-pagination-next, 
+.rc-pagination-total-text {
+  min-width: initial;
+  height: auto;
+  line-height: initial;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.rc-pagination-item a, 
+.rc-pagination-item button, 
+.rc-pagination-prev a, 
+.rc-pagination-prev button, 
+.rc-pagination-next a, 
+.rc-pagination-next button,
+.rc-pagination-total-text a, 
+.rc-pagination-total-text button {
+  padding: 0.2vw;
+  height: auto;
+  min-width: 2vw;
+  min-height: 2vw;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+  font-weight: 500;
+  color: #656f84 !important;
+  transition: 0.3s;
+}
+
+.rc-pagination-item.rc-pagination-item-active a,
+.rc-pagination-prev.rc-pagination-item-active a,
+.rc-pagination-next.rc-pagination-item-active a,
+.rc-pagination-total-text.rc-pagination-item-active a {
+  background-color: #afcaff;
+  border-color: #afcaff;
+  color: #ffffff !important;
+}
