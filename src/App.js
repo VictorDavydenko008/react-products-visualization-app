@@ -17,7 +17,7 @@ function App() {
     // fetch types categories from the database
     const fetchTypes = async () => {
         try {
-            const response = await fetch('http://localhost:8080/api/', {
+            const response = await fetch(process.env.REACT_APP_TYPES_API_URL, {
                 method: "GET",
                 mode: "cors",
             });
@@ -33,7 +33,7 @@ function App() {
     // fetch items of selected type from the database
     const fetchItems = async (type) => {
         try {
-            const response = await fetch(`http://127.0.0.1:8080/api/items/${type}`, {
+            const response = await fetch(process.env.REACT_APP_ITEMS_OF_TYPE_API_URL + type, {
                 method: "GET",
                 mode: "cors",
             });
