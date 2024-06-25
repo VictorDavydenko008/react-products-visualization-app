@@ -23,7 +23,7 @@ function App() {
             });
             const data = await response.json();
             // set unique id for each type element
-            const types = data.map(type => ({ ...type, id: uuidv4() }));
+            const types = data.map(type => ({ name: type, id: uuidv4() }));
             setTypes(types);
         } catch (error) {
             console.log(error.message);
@@ -33,7 +33,7 @@ function App() {
     // fetch items of selected type from the database
     const fetchItems = async (type) => {
         try {
-            const response = await fetch(process.env.REACT_APP_ITEMS_OF_TYPE_API_URL + type, {
+            const response = await fetch(`${process.env.REACT_APP_ITEMS_OF_TYPE_API_URL}${type}`, {
                 method: "GET",
                 mode: "cors",
             });
