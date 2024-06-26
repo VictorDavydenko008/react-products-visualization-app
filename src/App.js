@@ -33,7 +33,7 @@ function App() {
     // fetch items of selected type from the database
     const fetchItems = async (type) => {
         try {
-            const response = await fetch(`${process.env.REACT_APP_ITEMS_OF_TYPE_API_URL}${type}`, {
+            const response = await fetch(`${process.env.REACT_APP_ITEMS_OF_TYPE_API_URL}?type=${type}`, {
                 method: "GET",
                 mode: "cors",
             });
